@@ -17,12 +17,18 @@ createApp({
                 this.currentIndex = 0;
             }
         },
-        prevNext(){
+        prevHero(){
             if(this.currentIndex > 0){
                 this.currentIndex--;
             }else{
                 this.currentIndex.length - 1;
             }
+        },
+        goToSlide(index){
+            this.currentIndex = index;
         }
+    },
+    mounted(){
+
     }
 }).mount('#app');
