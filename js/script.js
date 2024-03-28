@@ -28,7 +28,8 @@ createApp({
             this.currentIndex = index;
         }
     },
-    mounted(){
 
+    mounted(){
+        setInterval(this.nextHero, 3000);
     }
 }).mount('#app');
