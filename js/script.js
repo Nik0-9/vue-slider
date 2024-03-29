@@ -7,6 +7,7 @@ createApp({
         return{
             slides,
             currentIndex: 0,
+            time: ''
         }
     },
     methods:{
@@ -26,10 +27,16 @@ createApp({
         },
         goToSlide(index){
             this.currentIndex = index;
+        },
+        start(){
+            this.time = setInterval(this.nextHero, 2000);
+        },
+        pause(){
+            clearInterval(this.time);
         }
     },
-
     mounted(){
-        setInterval(this.nextHero, 3000);
+        this.time
     }
+    
 }).mount('#app');
